@@ -43,6 +43,10 @@ Ignorar as pastas: venv/, __pycache__/, .git/.
 
 pip install -r requirements.txt
 
+//---------------------------------------- NO PC LOCAL ----------------------------------------
+
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
 //---------------------------------------- API PYTHON ----------------------------------------
 
 MATA

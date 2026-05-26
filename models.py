@@ -64,7 +64,7 @@ class TrainRequest(BaseModel):
     # AUGMENTATIONS
     # ================================================
     augmentations: int = Field(
-        default=20,
+        default=10,
         ge=1,
         le=100,
         description="Quantidade de imagens augmentadas"

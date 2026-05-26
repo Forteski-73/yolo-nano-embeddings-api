@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(
     BASE_DIR,
     "yolo",
-    "yolo26l-seg.pt"
+    "model_oxford_seg.pt"
 )
 
 if not os.path.exists(MODEL_PATH):
@@ -43,14 +43,9 @@ print("[YOLO]: Modelo carregado")
 # CLASSES VÁLIDAS
 # =====================================================
 CLASSES_VALIDAS = [
-    "bowl",
-    "cup",
-    "vase",
-    "frisbee",
-    "clock",
-    "toilet",
-    "dining table",
-    "person"
+    "PRATO",
+    "XICARA",
+    "CANECA"
 ]
 
 # =====================================================

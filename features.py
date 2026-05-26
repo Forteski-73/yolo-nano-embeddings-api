@@ -37,6 +37,7 @@ def hsv_histogram(img: Image.Image):
 
 """
 
+"""
 # =====================================================
 # HSV HISTOGRAM
 # =====================================================
@@ -104,6 +105,39 @@ def hsv_histogram(img: Image.Image):
     ).flatten()
 
     return hist_h.tolist()
+"""
+
+def hsv_histogram(img: Image.Image):
+
+    img_np = np.array(
+        img.convert("RGB")
+    )
+
+    hsv = cv2.cvtColor(
+        img_np,
+        cv2.COLOR_RGB2HSV
+    )
+
+    # HISTOGRAMA HSV COMPLETO
+    hist = cv2.calcHist(
+
+        [hsv],
+
+        [0, 1, 2],
+
+        None,
+
+        [12, 8, 8],
+
+        [0, 180, 0, 256, 0, 256]
+    )
+
+    hist = cv2.normalize(
+        hist,
+        hist
+    ).flatten()
+
+    return hist.tolist()
 
 # =====================================================
 # HISTOGRAMA RGB
